@@ -33,8 +33,56 @@ let promotion3Icon          // expects a String (emoji)
 function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
 
+
+console.log(database)
+numberOfProducts = database.products.length
+console.log(numberOfProducts)
+products = database.products
+console.log(products)
+
+let a = getRandomInt(database.promotions.length)
+promotion1Description = database.promotions[a-1].description
+promotion1Type = database.promotions[a-1].type
+
+if(promotion1Type == 'shipping') {
+  promotion1Icon = '🚛'
+  } else if(promotion1Type == 'discount') {
+  promotion1Icon = '🤑'
+  } else {
+    promotion1Icon = '🎰'
+  }
+
+console.log(promotion1Description)
+
+a = getRandomInt(database.promotions.length)
+promotion2Description = database.promotions[a-1].description
+promotion2Type = database.promotions[a-1].type
+
+if(promotion2Type == 'shipping') {
+  promotion2Icon = '🚛'
+  } else if(promotion2Type == 'discount') {
+  promotion2Icon = '🤑'
+  } else {
+    promotion2Icon = '🎰'
+  }
+
+a = getRandomInt(database.promotions.length)
+promotion3Description = database.promotions[a-1].description
+promotion3Type = database.promotions[a-1].type
+
+
+if(promotion3Type == 'shipping') {
+promotion3Icon = '🚛'
+} else if(promotion3Type == 'discount') {
+promotion3Icon = '🤑'
+} else {
+  promotion3Icon = '🎰'
+}
+ 
+
+
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
-  console.log(database)
+
 
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
